@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - 信用卡管家</title>
+    <meta name="description" content="登录信用卡管家，智能管理您的信用卡与消费记录">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+
+    <!-- 顶部导航栏 -->
+    <nav class="top-nav">
+        <div class="nav-logo">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+                <rect width="48" height="48" rx="12" fill="url(#navG)"/>
+                <rect x="8" y="15" width="32" height="4" rx="2" fill="white" opacity="0.95"/>
+                <rect x="8" y="23" width="14" height="3" rx="1.5" fill="white" opacity="0.6"/>
+                <rect x="8" y="30" width="9" height="3" rx="1.5" fill="white" opacity="0.4"/>
+                <circle cx="36" cy="30" r="5" fill="white" opacity="0.2"/>
+                <circle cx="40" cy="30" r="5" fill="white" opacity="0.12"/>
+                <defs>
+                    <linearGradient id="navG" x1="0" y1="0" x2="48" y2="48">
+                        <stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span>信用卡管家</span>
+        </div>
+        <div class="nav-links">
+            <a href="#">功能特性</a>
+            <a href="#">安全说明</a>
+            <a href="#">使用教程</a>
+        </div>
+        <button class="nav-cta" id="nav-login-btn">立即登录</button>
+    </nav>
+
+    <!-- 主体：左右分栏 -->
+    <div class="page-layout">
+
+        <!-- 左侧：Hero 内容区（Apple 风格） -->
+        <div class="hero-section">
+            <div class="hero-inner">
+
+                <p class="hero-eyebrow">个人财务管理</p>
+                <h1 class="hero-title">掌控每一分钱，<br>从未如此简单。</h1>
+                <p class="hero-body">
+                    由智能分类引擎驱动，多张信用卡轻松管理，消费数据一目了然，
+                    账单日还款日不再遗忘。有了信用卡管家，每一天的财务都应对得来。
+                </p>
+
+                <!-- 功能标签 -->
+                <div class="hero-pills">
+                    <span class="pill">📊 可视化分析</span>
+                    <span class="pill">🔒 数据本地存储</span>
+                    <span class="pill">📤 一键导出 Excel</span>
+                    <span class="pill">💳 多卡统一管理</span>
+                </div>
+
+                <!-- 数据条 -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-num">100%</span>
+                        <span class="stat-txt">数据私密</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">无限</span>
+                        <span class="stat-txt">卡片数量</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">0</span>
+                        <span class="stat-txt">广告干扰</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-num">免费</span>
+                        <span class="stat-txt">永久使用</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 装饰：浮动卡片 UI 预览（Apple 产品图风格） -->
+            <div class="hero-visual">
+                <div id="scroll-rotator">
+                    <div class="ui-card-float ui-card-main">
+                        <div class="ui-card-header">
+                            <div class="ui-card-dot" style="background:#ef4444"></div>
+                            <div class="ui-card-dot" style="background:#f59e0b"></div>
+                            <div class="ui-card-dot" style="background:#10b981"></div>
+                            <span class="ui-card-title">仪表盘</span>
+                        </div>
+                        <div class="ui-stats-row">
+                            <div class="ui-stat-block">
+                                <span class="ui-stat-val">¥24,800</span>
+                                <span class="ui-stat-lbl">总信用额度</span>
+                            </div>
+                            <div class="ui-stat-block ui-accent">
+                                <span class="ui-stat-val">¥3,260</span>
+                                <span class="ui-stat-lbl">本月消费</span>
+                            </div>
+                        </div>
+                        <div class="ui-bar-chart">
+                            <div class="ui-bar" style="height:55%; background: linear-gradient(to top,#6366f1,#8b5cf6)"></div>
+                            <div class="ui-bar" style="height:80%; background: linear-gradient(to top,#6366f1,#8b5cf6)"></div>
+                            <div class="ui-bar" style="height:40%; background: linear-gradient(to top,#6366f1,#8b5cf6)"></div>
+                            <div class="ui-bar" style="height:90%; background: linear-gradient(to top,#6366f1,#8b5cf6); opacity:1"></div>
+                            <div class="ui-bar" style="height:65%; background: linear-gradient(to top,#6366f1,#8b5cf6)"></div>
+                            <div class="ui-bar" style="height:75%; background: linear-gradient(to top,#6366f1,#8b5cf6)"></div>
+                        </div>
+                        <div class="ui-label">消费趋势（近6个月）</div>
+                    </div>
+
+                    <div class="ui-card-float ui-card-secondary">
+                        <div class="ui-credit-card">
+                            <div class="uicc-top">
+                                <span class="uicc-bank">招商银行</span>
+                                <div class="uicc-chip">████</div>
+                            </div>
+                            <div class="uicc-num">**** **** **** 8888</div>
+                            <div class="uicc-bottom">
+                                <span class="uicc-lbl">信用额度</span>
+                                <span class="uicc-val">¥50,000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ui-card-float ui-card-badge">
+                        <span class="badge-icon">✅</span>
+                        <span class="badge-txt">账单已还清</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 右侧：登录表单（固定） -->
+        <div class="form-panel">
+            <div class="login-card">
+                <div class="login-header">
+                    <h2 class="login-title">欢迎回来</h2>
+                    <p class="login-subtitle">登录您的账户，继续管理财务</p>
+                </div>
+
+                <form id="login-form" class="login-form" novalidate>
+                    <div class="form-field" id="field-username">
+                        <label for="username" class="field-label">账号</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                            </span>
+                            <input type="text" id="username" name="username" class="field-input"
+                                placeholder="请输入您的账号" autocomplete="username" autofocus>
+                            <span class="input-clear" id="clear-username" title="清除">✕</span>
+                        </div>
+                        <span class="field-error" id="error-username"></span>
+                    </div>
+
+                    <div class="form-field" id="field-password">
+                        <label for="password" class="field-label">密码</label>
+                        <div class="input-wrapper">
+                            <span class="input-icon">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            </span>
+                            <input type="password" id="password" name="password" class="field-input"
+                                placeholder="请输入您的密码" autocomplete="current-password">
+                            <button type="button" class="toggle-password" id="toggle-password" aria-label="切换密码可见性">
+                                <span id="eye-icon">👁️</span>
+                            </button>
+                        </div>
+                        <span class="field-error" id="error-password"></span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me" for="remember">
+                            <input type="checkbox" id="remember" name="remember">
+                            <span class="checkbox-custom"></span>
+                            <span class="remember-text">记住我</span>
+                        </label>
+                        <a href="#" class="forgot-link" id="forgot-link">忘记密码？</a>
+                    </div>
+
+                    <button type="submit" class="btn-login" id="btn-login">
+                        <span class="btn-text">登 录</span>
+                        <span class="btn-loader" id="btn-loader">
+                            <span class="loader-dot"></span>
+                            <span class="loader-dot"></span>
+                            <span class="loader-dot"></span>
+                        </span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                </form>
+
+                <div class="divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-text">或者</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <button type="button" class="btn-guest" id="btn-guest">
+                    <span>🚀</span>
+                    <span>以访客身份体验</span>
+                </button>
+
+                <p class="register-link">
+                    还没有账户？
+                    <a href="#" id="register-link">立即注册</a>
+                </p>
+            </div>
+
+            <p class="footer-text">© 2025 信用卡管家 · 数据安全存储于本地</p>
+        </div>
+
+    </div>
+
+    <!-- Toast 通知 -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
